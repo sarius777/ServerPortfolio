@@ -2,7 +2,7 @@
 // import cors from 'cors';
 let cors = require("cors");
 let express = require("express");
-let pr = require('./src/procedure');
+let pr = require('./server/src/procedure');
 // import express from 'express';
 // import pr from './src/procedure';
 
