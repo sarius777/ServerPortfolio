@@ -49,6 +49,11 @@ app.put('/:symbol1/:symbol2?/:symbol3?', async (req, res) => {
 module.exports = app;
 
 //Auf welchem Port der Server kommunizieren soll.
-app.listen(3001);
 
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 3001;
+}
+app.listen(port);
 
