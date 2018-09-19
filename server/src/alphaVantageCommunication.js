@@ -1,8 +1,9 @@
 // Klasse, die mit Alpha Vantage kommuniziert und die entsprechenden Marktdaten erhält.
-import axios from 'axios';
+// import axios from 'axios';
+let axios = require("axios");
 
 //Um von Außerhalb auf die Funktion zugreifen zu können.
-export default  {
+module.exports=  {
     /**
      * Fordert die Marktdaten von Alpha-Vantage an.
      * Bekommt die Kürzel übergeben mit denen die URL zusammengesetzt wird.

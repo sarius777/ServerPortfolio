@@ -1,5 +1,6 @@
 //Klasse, die das MVP und den effizienten Rand des Portfolios berechnet.
-import math from 'mathjs';
+// import math from 'mathjs';
+let math = require("mathjs");
 
 
 //Um von Auserhalb auf die Funktion zugreifen zu können.

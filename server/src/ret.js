@@ -1,6 +1,6 @@
 //Klasse, die die historischen Renditen berechnet.
-import R from 'ramda';
-
+// import R from 'ramda';
+let R = require("ramda");
 
 module.exports = {
     /**

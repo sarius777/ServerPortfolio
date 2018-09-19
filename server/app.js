@@ -1,7 +1,10 @@
 // Klasse, die mit dem Client kommuniziert und die Kettenreaktion in Bewegung setzt.
-import cors from 'cors';
-import express from 'express';
-import pr from './src/procedure';
+// import cors from 'cors';
+let cors = require("cors");
+let express = require("express");
+let pr = require('./src/procedure');
+// import express from 'express';
+// import pr from './src/procedure';
 
 
 //Die App wird initiiert und nutzt Express.js.
@@ -17,7 +20,7 @@ app.use(cors());
  * Ist diese fertig, werden die Ergebnisse wieder an den Client gesendet.
  * Sollte ein Fehler entstehen wird dieser stattdessen an den Client gesendet.
  */
-app.put('/:symbol1/:symbol2?/:symbol3?', async (req, res) => {
+app.get('/:symbol1/:symbol2?/:symbol3?', async (req, res) => {
     let symbols = [];
     //wenn nur ein Kürzel übergeben wurde.
     if(req.params.symbol2 === undefined){
@@ -51,9 +54,7 @@ module.exports = app;
 //Auf welchem Port der Server kommunizieren soll.
 
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-    port = 3001;
-}
-app.listen(port);
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 

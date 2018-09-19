@@ -1,11 +1,12 @@
 // Klasse, die die Kennzahlen der Wertpapiere berechnet.
 let ss = require('simple-statistics');
-import R from 'ramda';
+let R = require("ramda");
+// import R from 'ramda';
 
 
 
 //Um von Auserhalb auf die Funktion zugreifen zu können.
-export default {
+module.exports= {
 
     /**
      * Berechnet die Standardabweichung.

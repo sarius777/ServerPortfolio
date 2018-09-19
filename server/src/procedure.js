@@ -1,14 +1,21 @@
 //Klasse bzw. Funktion, die Die Berechnungen für das Portfolio durchführt.
-import kf from './keyFigures';
-import md from './marketData';
-import ef from './efficientFrontier';
-import mv from './marketValues';
-import re from './ret';
-import R from 'ramda';
+// import kf from './keyFigures';
+// import md from './marketData';
+// import ef from './efficientFrontier';
+// import mv from './marketValues';
+// import re from './ret';
+// import R from 'ramda';
+
+let kf = require("./keyFigures");
+let md = require("./marketData");
+let ef = require("./efficientFrontier");
+let mv = require("./marketValues");
+let re = require("./ret");
+let R = require("ramda");
 
 
 //Um von Außerhalb auf die Funktion zugreifen zu können.
-export default {
+module.exports =  {
 
     /**
      * Die Prozedur des Servers.

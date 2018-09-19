@@ -1,10 +1,13 @@
 //Klasse, die die erhaltenen Marktdaten filtert und weitergibt.
-import ap from './alphaVantageCommunication';
-import mv from './marketValues'
+// import ap from './alphaVantageCommunication';
+// import mv from './marketValues'
+
+let ap = require('./alphaVantageCommunication');
+let mv = require('./marketValues');
 
 
 //Um von Außerhalb auf die Funktion zugreifen zu können.
-export default {
+module.exports= {
 
     /**
      * Berechnet die Daten, Close- und Dividenden-Werte für jeweils jedes ETF.
@@ -66,7 +69,8 @@ export default {
  * Dreht den Datensatz um, um eine Berechnung der Rendite leichter zu machen.
  * Gibt die fertigen Arrays zurück.
  */
-export function filterNormal(ETF) {
+//export
+function filterNormal(ETF) {
     //Hilfsvariablen aufsetzen.
     const help = ETF["Time Series (Daily)"];
     let keys = Object.keys(help);
